@@ -41,18 +41,18 @@ El algoritmo entra en un bucle que se ejecuta mientras haya aristas por procesar
 
 3. **Selección de Arista**
 
-Se elige una arista _$(X, C)$_ del conjunto _AristasPorProcesar_ y se elimina del conjunto. Esta arista conecta una variable _$X$_ con una restricción _$C$_ en la gráfica bipartita.
+Se elige una arista $(X, C)$ del conjunto _AristasPorProcesar_ y se elimina del conjunto. Esta arista conecta una variable $X$ con una restricción $C$ en la gráfica bipartita.
 
 4. **Consistencia de Arco**
 
-Se realiza un bucle sobre el dominio _$dom(X)$_ de la variable _$X$_. Para cada valor _$x$_ en el dominio, se verifica si existe algún conjunto de valores y para el resto de variables, tal que la restricción _$C(x, \vec{y})$_ se satisface. Si no existe tales valores _$\vec{y}$_, significa que _$x$_ no cumple con la restricción _$C$_.
+Se realiza un bucle sobre el dominio $dom(X)$ de la variable $X$. Para cada valor $x$ en el dominio, se verifica si existe algún conjunto de valores y para el resto de variables, tal que la restricción $C(x, \vec{y})$ se satisface. Si no existe tales valores $\vec{y}$, significa que $x$ no cumple con la restricción $C$.
 
 >_En este punto básicamente estamos evaluando cada valor del dominio de todas las variables y analizando si es posible que ese valor pueda cumplir con las restricciones_
 
 
 5. **Actualización del Dominio**
 
-En caso de que no exista _$\vec{y}$_ que satisfaga la restricción para un valor _$x$_, se elimina _$x$_ del dominio _$dom(X)$_. Además, se agregan nuevas aristas al conjunto _AristasPorProcesar_ para todas las variables _$Z$_ conectadas con _$X$_ mediante una arista _$(Z, D)$_. La condición _$D$_ de estas nuevas aristas implica a _$X$_ y garantiza que _$Z$_ sea diferente de _$X$_.
+En caso de que no exista $\vec{y}$ que satisfaga la restricción para un valor $x$, se elimina $x$ del dominio $dom(X)$. Además, se agregan nuevas aristas al conjunto _AristasPorProcesar_ para todas las variables $Z$ conectadas con $X$ mediante una arista $(Z, D)$. La condición $D$ de estas nuevas aristas implica a $X$ y garantiza que $Z$ sea diferente de $X$.
 
 >_Si no hay forma de que el valor analizado cumpla con alguna restricción, se quita del dominio de la variable respectiva pues ninguna combinación de valores que contenga ese valor en esa variable será solución al problema. Esto pudo afectar a otros valores que necesitaban de ese para ser consistentes, por lo tanto es necesario volver a revisar ciertas aristas_
 
