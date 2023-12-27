@@ -47,18 +47,18 @@ Se elige una arista $(X, C)$ del conjunto _AristasPorProcesar_ y se elimina del 
 
 Se realiza un bucle sobre el dominio $dom(X)$ de la variable $X$. Para cada valor $x$ en el dominio, se verifica si existe algún conjunto de valores y para el resto de variables, tal que la restricción $C(x, \vec{y})$ se satisface. Si no existe tales valores $\vec{y}$, significa que $x$ no cumple con la restricción $C$.
 
->_En este punto básicamente estamos evaluando cada valor del dominio de todas las variables y analizando si es posible que ese valor pueda cumplir con las restricciones_
+>_En este punto evaluamos cada valor del dominio de todas las variables y analizando si es posible que ese valor pueda cumplir con las restricciones_
 
 
 5. **Actualización del Dominio**
 
 En caso de que no exista $\vec{y}$ que satisfaga la restricción para un valor $x$, se elimina $x$ del dominio $dom(X)$. Además, se agregan nuevas aristas al conjunto _AristasPorProcesar_ para todas las variables $Z$ conectadas con $X$ mediante una arista $(Z, D)$. La condición $D$ de estas nuevas aristas implica a $X$ y garantiza que $Z$ sea diferente de $X$.
 
->_Si no hay forma de que el valor analizado cumpla con alguna restricción, se quita del dominio de la variable respectiva pues ninguna combinación de valores que contenga ese valor en esa variable será solución al problema. Esto pudo afectar a otros valores que necesitaban de ese para ser consistentes, por lo tanto es necesario volver a revisar ciertas aristas_
+>_Si no hay forma de que el valor analizado cumpla con alguna restricción, se quita del dominio de la variable respectiva pues ninguna propuesta de solución que contenga ese valor en esa variable será solución al problema. Esto pudo afectar a otros valores que necesitaban de este para ser consistentes, por lo tanto es necesario volver a revisar ciertas aristas_
 
 6. **Fin de Iteración**
 
-El bucle continúa hasta que no haya más aristas por procesar en _AristasPorProcesar_. En este punto se logra la arco-consistencia y garantizamos que todos los valores de las variables son consistentes con las restricciones.
+El bucle continúa hasta que no haya más aristas en _AristasPorProcesar_. En este punto se logra la arco-consistencia y garantizamos que todos los valores de las variables son consistentes con las restricciones.
 
-> _Esto no garantiza que cualquier combinación de los valores de los dominios restantes de las variables es una solución al problema. Para obtener la soluciones consistentes se necesita realizar una búsqueda sobre los dominios reducidos por el algoritmo_ 
+> _Esto no garantiza que cualquier combinación de los valores restantes sea una solución al problema. Para obtener la solución o soluciones finales se necesita realizar una búsqueda sobre los dominios reducidos obtenidos por el algoritmo_ 
 
