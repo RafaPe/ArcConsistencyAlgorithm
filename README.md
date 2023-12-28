@@ -18,8 +18,9 @@ En la representación de un PSR, las variables y las restricciones se modelan co
 La estructura bipartita permite visualizar de manera clara las relaciones entre las variables y las restricciones, sirviendo como base para la aplicación efectiva de la arco-consistencia.
 
 El algoritmo AC-3 actúa sobre esta gráfica bipartita, realizando un proceso iterativo de propagación de consistencia a través de los arcos. La arco-consistencia se logra eliminando valores inconsistentes de los dominios de las variables
-
-![Gráfica de restricciones ejemplo](docs/imgs/bipartite_example.png)
+<p align="center">
+ <img src="docs/imgs/bipartite_example.png" alt="Texto Alternativo" width="400" height="200">
+</p>
 
 ### Pseudocódigo de AC-3
 
