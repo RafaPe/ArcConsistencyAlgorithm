@@ -19,6 +19,8 @@ La estructura bipartita permite visualizar de manera clara las relaciones entre 
 
 El algoritmo AC-3 actúa sobre esta gráfica bipartita, realizando un proceso iterativo de propagación de consistencia a través de los arcos. La arco-consistencia se logra eliminando valores inconsistentes de los dominios de las variables
 
+![Gráfica de restricciones ejemplo](docs/imgs/bipartite_example.png)
+
 ### Pseudocódigo de AC-3
 
 ```
