@@ -65,3 +65,18 @@ El bucle continúa hasta que no haya más aristas en _AristasPorProcesar_. En es
 
 > _Esto no garantiza que cualquier combinación de los valores restantes sea una solución al problema. Para obtener la solución o soluciones finales se necesita realizar una búsqueda sobre los dominios reducidos obtenidos por el algoritmo_ 
 
+
+## Ejemplo
+Vamos a abordar un problema pequeño y directo para simplificar la explicación del funcionamiento del algoritmo la resolución de PSRs. La comprensión de estos conceptos y pasos será fundamental, ya que la solución de problemas más complejos se realiza siguiendo el mismo procedimiento como veremos después.
+
+En la siguiente figura, se deben colocar seis números entre el 1 y el 5 en los cuadrados, de manera que se cumplan las siguientes condiciones:
+
+- La suma de los números en cada renglón debe ser la misma.
+- La suma de los números en cada columna debe ser la misma.
+
+Se han proporcionado algunos números en los cuadrados. **¿Puedes determinar qué número debe colocarse en el cuadro sombreado?**
+
+
+<p align="center">
+ <img src="docs/imgs/example_problem.png" alt="Texto Alternativo" width="500" height="150">
+</p>
