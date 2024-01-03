@@ -90,7 +90,7 @@ En este problema claramente puede ser modelado como un PSR, pues hay restriccion
 
 Ahora sí podemos modelar las restricciones. En primer lugar se menciona que la suma de los renglones debe ser la misma, esto puede expresarse de la siguente forma:
 
-$$ 1 + A + 4 = B + 2+ C$$
+$$1 + A + 4 = B + 2+ C$$
 
 Lo cual representa que la suma del primer renglón debe ser igual a la del segundo. Posteriormente también se nos indica que la suma por columnas también debe ser equivalente. Y su expresión quedaría de la siguiente forma:
 $$1 +B = A+2 = 4+C$$
@@ -113,16 +113,16 @@ Con esta gráfica ya podemos aplicar el algoritmo de arco-consistencia **AC-3** 
 Despues de aplicar el algoritmo de arco-consistencia, nos damos cuenta que el dominio de las variables cambió. Esto pasó porque sí existian valores inconsistentes con los arcos de restricciones, por lo tanto se eliminaron. Los nuevos dominios ahora son:
 
 
-$ A  \in \{3, 4\}$ &nbsp;&nbsp; $B \in \{4, 5\}$ &nbsp;&nbsp; $C \in \{1, 2\}$
+$A  \in \{3, 4\}$ &nbsp;&nbsp; $B \in \{4, 5\}$ &nbsp;&nbsp; $C \in \{1, 2\}$
 
 
 Esto ya nos deja con un espacio de búsqueda mucho más manejable. Antes teniamos $5^3$ combinaciones de donde buscar, ahora sólo tenemos $2^3$. Por lo tanto pasamos de 125 combinaciones a tan solo 8. Estás 8 posibles soluciones incluso se puede escribir aquí mismo:
 
-$ A = 3 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 1 $
-$ A = 4 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 1 $
-$ A = 3 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 1 $
-$ A = 4 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 1 $
-$ A = 3 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 2 $
-$ A = 4 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 2 $
-$ A = 3 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 2 $
-$ A = 4 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 2 $
+$A = 3 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 1$
+$A = 4 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 1$
+$A = 3 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 1$
+$A = 4 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 1$
+$A = 3 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 2$
+$A = 4 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 2$
+$A = 3 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 2$
+$A = 4 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 2$
