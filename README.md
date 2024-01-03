@@ -118,11 +118,11 @@ $A  \in \{3, 4\}$ &nbsp;&nbsp; $B \in \{4, 5\}$ &nbsp;&nbsp; $C \in \{1, 2\}$
 
 Esto ya nos deja con un espacio de búsqueda mucho más manejable. Antes teniamos $5^3$ combinaciones de donde buscar, ahora sólo tenemos $2^3$. Por lo tanto pasamos de 125 combinaciones a tan solo 8. Estás 8 posibles soluciones incluso se puede escribir aquí mismo:
 
-$A = 3 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 1$
-$A = 4 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 1$
-$A = 3 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 1$
-$A = 4 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 1$
-$A = 3 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 2$
-$A = 4 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 2$
-$A = 3 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 2$
-$A = 4 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 2$
+1. $A = 3 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 1$
+2. $A = 4 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 1$
+3. $A = 3 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 1$
+4. $A = 4 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 1$
+5. $A = 3 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 2$
+6. $A = 4 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 2$
+7. $A = 3 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 2$
+8. $A = 4 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 2$
