@@ -80,3 +80,44 @@ Se han proporcionado algunos números en los cuadrados. **¿Puedes determinar qu
 <p align="center">
  <img src="docs/imgs/example_problem.png" alt="Texto Alternativo" width="500" height="150">
 </p>
+
+### Solución
+En este problema claramente puede ser modelado como un PSR, pues hay restricciones muy claras dentro de las instrucciones. Por lo tanto, como primer paso, modelaremos las restricciones del problema. Para esto será util asignar nombres a las variables (las casillas en blanco), ya que estas son a las que tenemos que asignar valores para conocer lo que hay en la casilla sombreada. 
+
+<p align="center">
+ <img src="docs/imgs/example_problem2.png" alt="Texto Alternativo" width="500" height="150">
+</p>
+
+Ahora sí podemos modelar las restricciones. En primer lugar se menciona que la suma de los renglones debe ser la misma, esto puede expresarse de la siguente forma:
+$$ 1 + A + 4 = B + 2+ C$$
+Lo cual representa que la suma del primer renglón debe ser igual a la del segundo. Posteriormente también se nos indica que la suma por columnas también debe ser equivalente. Y su expresión quedaría de la siguiente forma:
+$$1 +B = A+2 = 4+C$$
+
+Con estas expresiones hemos modelado las restricciones del problema. Ahora la pregunta es si existen valores para $A,B,C \in \{1,2,3,4,5\}$ tal que se cumplan ambas restricciones al mismo tiempo. Resolviendo este PSR podremos responder a la pregunta del problema.
+
+<!-- > Notemos que es necesario hacer asignaciones a todas las variables para poder responder la pregunta sobre el valor de la casilla sombreada. Es por esto que es necesario resolver todo el sistema para encontrar la respuesta. -->
+
+Ya que tenemos la modelación de restricciones, variables y sus dominios, podemos obtener la gráfica de restricciones. Recordemos que será una gráfica bipartita donde las restricciones serán un tipo de nodo y las variables otro. Cada nodo de restricción irá unido a las variables que están involucradas en esta.
+
+<p align="center">
+ <img src="docs/imgs/constraints_example_problem.png" alt="Texto Alternativo" width="450" height="240">
+</p>
+
+> Notemos que la modelación de esta gráfica puede variar (no es única) y esto afectaría directamente al desempeño del algoritmo de arco-consistencia.
+
+Con esta gráfica ya podemos aplicar el algoritmo de arco-consistencia **AC-3** para reducir los dominios de las variables si es que hay valores que no presentan consistencia de arco. Para analizar paso a paso la aplicación del algoritmo a este problema se puede revisar el siguiente documento: [AC-3 aplicado (paso a paso)](docs/arco_consistencia_aplicada.pdf)
+
+Despues de aplicar el algoritmo de arco-consistencia, nos damos cuenta que el dominio de las variables cambió. Esto pasó porque sí existian valores inconsistentes con los arcos de restricciones, por lo tanto se eliminaron. Los nuevos dominios ahora son:
+
+$$ A  \in \{3, 4\} \hspace{1cm} B \in \{4, 5\} \hspace{1cm} C \in \{1, 2\}$$
+
+Esto ya nos deja con un espacio de búsqueda mucho más manejable. Antes teniamos $5^3$ combinaciones de donde buscar, ahora sólo tenemos $2^3$. Por lo tanto pasamos de 125 combinaciones a tan solo 8. Estás 8 posibles soluciones incluso se puede escribir aquí mismo:
+
+1. $ A = 3 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 1 $
+2. $ A = 4 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 1 $
+3. $ A = 3 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 1 $
+4. $ A = 4 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 1 $
+5. $ A = 3 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 2 $
+6. $ A = 4 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 2 $
+7. $ A = 3 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 2 $
+8. $ A = 4 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 2 $
