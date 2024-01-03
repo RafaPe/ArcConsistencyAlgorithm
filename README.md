@@ -89,7 +89,9 @@ En este problema claramente puede ser modelado como un PSR, pues hay restriccion
 </p>
 
 Ahora sí podemos modelar las restricciones. En primer lugar se menciona que la suma de los renglones debe ser la misma, esto puede expresarse de la siguente forma:
+
 $$ 1 + A + 4 = B + 2+ C$$
+
 Lo cual representa que la suma del primer renglón debe ser igual a la del segundo. Posteriormente también se nos indica que la suma por columnas también debe ser equivalente. Y su expresión quedaría de la siguiente forma:
 $$1 +B = A+2 = 4+C$$
 
@@ -97,7 +99,8 @@ Con estas expresiones hemos modelado las restricciones del problema. Ahora la pr
 
 <!-- > Notemos que es necesario hacer asignaciones a todas las variables para poder responder la pregunta sobre el valor de la casilla sombreada. Es por esto que es necesario resolver todo el sistema para encontrar la respuesta. -->
 
-Ya que tenemos la modelación de restricciones, variables y sus dominios, podemos obtener la gráfica de restricciones. Recordemos que será una gráfica bipartita donde las restricciones serán un tipo de nodo y las variables otro. Cada nodo de restricción irá unido a las variables que están involucradas en esta.
+Ya que tenemos la modelación de restricciones, variables y sus dominios, podemos obtener la gráfica de restricciones. Recordemos que será una gráfica bipartita donde las restricciones serán un tipo de nod
+o y las variables otro. Cada nodo de restricción irá unido a las variables que están involucradas en esta.
 
 <p align="center">
  <img src="docs/imgs/constraints_example_problem.png" alt="Texto Alternativo" width="450" height="240">
