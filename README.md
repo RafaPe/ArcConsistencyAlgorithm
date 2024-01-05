@@ -95,7 +95,7 @@ $$1 + A + 4 = B + 2+ C$$
 Lo cual representa que la suma del primer renglón debe ser igual a la del segundo. Posteriormente también se nos indica que la suma por columnas también debe ser equivalente. Y su expresión quedaría de la siguiente forma:
 $$1 +B = A+2 = 4+C$$
 
-Con estas expresiones hemos modelado las restricciones del problema. Ahora la pregunta es si existen valores para $A,B,C \in $ { $1,2,3,4,5$ } tal que se cumplan ambas restricciones al mismo tiempo. Resolviendo este PSR podremos responder a la pregunta del problema.
+Con estas expresiones hemos modelado las restricciones del problema. Ahora la pregunta es si existen valores para $A,B,C \in$ { $1,2,3,4,5$ } tal que se cumplan ambas restricciones al mismo tiempo. Resolviendo este PSR podremos responder a la pregunta del problema.
 
 <!-- > Notemos que es necesario hacer asignaciones a todas las variables para poder responder la pregunta sobre el valor de la casilla sombreada. Es por esto que es necesario resolver todo el sistema para encontrar la respuesta. -->
 
@@ -112,9 +112,8 @@ Con esta gráfica ya podemos aplicar el algoritmo de arco-consistencia **AC-3** 
 
 Despues de aplicar el algoritmo de arco-consistencia, nos damos cuenta que el dominio de las variables cambió. Esto pasó porque sí existian valores inconsistentes con los arcos de restricciones, por lo tanto se eliminaron. Los nuevos dominios ahora son:
 
-<center>
-<img src="https://latex.codecogs.com/gif.latex?A  \in \{3, 4\} \hspace{1cm} B \in \{4, 5\} \hspace{1cm} C \in \{1, 2\}" /> 
-</center>
+
+$A  \in$ { $3, 4$ } &nbsp;&nbsp;&nbsp; $B \in$ { $4, 5$ } &nbsp;&nbsp;&nbsp; $C \in$ { $1, 2$ }
 
 Esto ya nos deja con un espacio de búsqueda mucho más manejable. Antes teniamos $5^3$ combinaciones de donde buscar, ahora sólo tenemos $2^3$. Por lo tanto pasamos de 125 combinaciones a tan solo 8. Estás 8 posibles soluciones incluso se puede escribir aquí mismo:
 
