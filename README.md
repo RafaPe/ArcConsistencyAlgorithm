@@ -48,16 +48,16 @@ Se elige una arista $(X, C)$ del conjunto _AristasPorProcesar_ y se elimina del 
 
 4. **Consistencia de Arco**
 
-Se realiza un bucle sobre el dominio $dom(X)$ de la variable $X$. Para cada valor $x$ en el dominio, se verifica si existe algún conjunto de valores y para el resto de variables, tal que la restricción $C(x, \vec{y})$ se satisface. Si no existe tales valores $\vec{y}$, significa que $x$ no cumple con la restricción $C$.
+Se realiza un bucle sobre el dominio $dom(X)$ de la variable $X$. Para cada valor $x$ en el dominio, se verifica si existe algún conjunto de valores $\vec{y}$ para el resto de variables, tal que la restricción $C(x, \vec{y})$ se satisface. Si no existe tales valores, significa que el valor $x$ no cumple la arco-consistencia con la restricción $C$.
 
->_En este punto evaluamos cada valor del dominio de todas las variables y analizando si es posible que ese valor pueda cumplir con las restricciones_
+>_En este punto evaluamos cada valor del dominio de la variable y analizamos si es posible que ese valor pueda cumplir con la restricción con la que está relacionada_
 
 
 5. **Actualización del Dominio**
 
 En caso de que no exista $\vec{y}$ que satisfaga la restricción para un valor $x$, se elimina $x$ del dominio $dom(X)$. Además, se agregan nuevas aristas al conjunto _AristasPorProcesar_ para todas las variables $Z$ conectadas con $X$ mediante una arista $(Z, D)$. La condición $D$ de estas nuevas aristas implica a $X$ y garantiza que $Z$ sea diferente de $X$.
 
->_Si no hay forma de que el valor analizado cumpla con alguna restricción, se quita del dominio de la variable respectiva pues ninguna propuesta de solución que contenga ese valor en esa variable será solución al problema. Esto pudo afectar a otros valores que necesitaban de este para ser consistentes, por lo tanto es necesario volver a revisar ciertas aristas_
+>_Si no hay forma de que el valor analizado cumpla con la restricción, se quita del dominio de la variable respectiva pues ninguna propuesta de solución que contenga ese valor en esa variable será solución al problema. Esto pudo afectar a otros valores que necesitaban de este para ser consistentes, por lo tanto es necesario volver a revisar ciertas aristas_
 
 6. **Fin de Iteración**
 
@@ -95,7 +95,7 @@ $$1 + A + 4 = B + 2+ C$$
 Lo cual representa que la suma del primer renglón debe ser igual a la del segundo. Posteriormente también se nos indica que la suma por columnas también debe ser equivalente. Y su expresión quedaría de la siguiente forma:
 $$1 +B = A+2 = 4+C$$
 
-Con estas expresiones hemos modelado las restricciones del problema. Ahora la pregunta es si existen valores para $A,B,C \in \{1,2,3,4,5\}$ tal que se cumplan ambas restricciones al mismo tiempo. Resolviendo este PSR podremos responder a la pregunta del problema.
+Con estas expresiones hemos modelado las restricciones del problema. Ahora la pregunta es si existen valores para $A,B,C \in $ { $1,2,3,4,5$ } tal que se cumplan ambas restricciones al mismo tiempo. Resolviendo este PSR podremos responder a la pregunta del problema.
 
 <!-- > Notemos que es necesario hacer asignaciones a todas las variables para poder responder la pregunta sobre el valor de la casilla sombreada. Es por esto que es necesario resolver todo el sistema para encontrar la respuesta. -->
 
@@ -112,17 +112,17 @@ Con esta gráfica ya podemos aplicar el algoritmo de arco-consistencia **AC-3** 
 
 Despues de aplicar el algoritmo de arco-consistencia, nos damos cuenta que el dominio de las variables cambió. Esto pasó porque sí existian valores inconsistentes con los arcos de restricciones, por lo tanto se eliminaron. Los nuevos dominios ahora son:
 
-
-$A  \in \{3, 4\}$ &nbsp;&nbsp; $B \in \{4, 5\}$ &nbsp;&nbsp; $C \in \{1, 2\}$
-
+<center>
+<img src="https://latex.codecogs.com/gif.latex?A  \in \{3, 4\} \hspace{1cm} B \in \{4, 5\} \hspace{1cm} C \in \{1, 2\}" /> 
+</center>
 
 Esto ya nos deja con un espacio de búsqueda mucho más manejable. Antes teniamos $5^3$ combinaciones de donde buscar, ahora sólo tenemos $2^3$. Por lo tanto pasamos de 125 combinaciones a tan solo 8. Estás 8 posibles soluciones incluso se puede escribir aquí mismo:
 
-1. $A = 3 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 1$
-2. $A = 4 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 1$
-3. $A = 3 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 1$
-4. $A = 4 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 1$
-5. $A = 3 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 2$
-6. $A = 4 \hspace{0.5cm} B = 4 \hspace{0.5cm} C = 2$
-7. $A = 3 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 2$
-8. $A = 4 \hspace{0.5cm} B = 5 \hspace{0.5cm} C = 2$
+1. $A = 3$ &nbsp;&nbsp;&nbsp; $B = 4$ &nbsp;&nbsp;&nbsp; $C = 1$
+2. $A = 4$ &nbsp;&nbsp;&nbsp; $B = 4$ &nbsp;&nbsp;&nbsp; $C = 1$
+3. $A = 3$ &nbsp;&nbsp;&nbsp; $B = 5$ &nbsp;&nbsp;&nbsp; $C = 1$
+4. $A = 4$ &nbsp;&nbsp;&nbsp; $B = 5$ &nbsp;&nbsp;&nbsp; $C = 1$
+5. $A = 3$ &nbsp;&nbsp;&nbsp; $B = 4$ &nbsp;&nbsp;&nbsp; $C = 2$
+6. $A = 4$ &nbsp;&nbsp;&nbsp; $B = 4$ &nbsp;&nbsp;&nbsp; $C = 2$
+7. $A = 3$ &nbsp;&nbsp;&nbsp; $B = 5$ &nbsp;&nbsp;&nbsp; $C = 2$
+8. $A = 4$ &nbsp;&nbsp;&nbsp; $B = 5$ &nbsp;&nbsp;&nbsp; $C = 2$
