@@ -109,10 +109,7 @@ Ya que tenemos la modelación de restricciones, variables y sus dominios, podemo
 
 Con esta gráfica ya podemos aplicar el algoritmo de arco-consistencia **AC-3** para reducir los dominios de las variables (si es que hay valores que no presentan consistencia de arco). Si se quiere revisar el paso a paso de la aplicación del algoritmo a este problema se puede revisar el siguiente documento: [AC-3 aplicado (paso a paso)](docs/arco_consistencia_aplicada.pdf)
 
-Después de aplicar el algoritmo de arco-consistencia, nos damos cuenta que el dominio de las variables cambió. Esto pasó porque sí existian valores inconsistentes con los arcos de restricciones, por lo tanto se eliminaron. Los nuevos dominios ahora son:
-
-
-$A  \in$ { $3, 4$ } &nbsp;&nbsp;&nbsp; $B \in$ { $4, 5$ } &nbsp;&nbsp;&nbsp; $C \in$ { $1, 2$ }
+Después de aplicar el algoritmo de arco-consistencia, nos damos cuenta que el dominio de las variables cambió. Esto pasó porque sí existian valores inconsistentes con los arcos de restricciones, por lo tanto se eliminaron. Los nuevos dominios ahora son: $A  \in$ { $3, 4$ } &nbsp;&nbsp; $B \in$ { $4, 5$ } &nbsp;&nbsp; $C \in$ { $1, 2$ }
 
 Esto ya nos deja con un espacio de búsqueda mucho más manejable. Antes teniamos $5^3$ combinaciones de donde buscar, ahora sólo tenemos $2^3$. Por lo tanto pasamos de 125 combinaciones a tan solo 8 (esta es la ventaja de la arco-consistencia). Estás 8 posibles soluciones incluso se pueden escribir aquí mismo:
 
