@@ -399,3 +399,6 @@ FodyWeavers.xsd
 
 #ipynb checkpoints
 notebooks/.ipynb_checkpoints/*
+
+#pycache
+scripts/__pycache__/*
