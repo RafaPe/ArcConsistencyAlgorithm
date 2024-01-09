@@ -176,7 +176,7 @@ Se han proporcionado algunos números en los cuadrados. **¿Puedes determinar qu
 
 
 <p align="center">
- <img src="docs/imgs/example_problem.png" alt="Texto Alternativo" width="500" height="150">
+ <img src="docs/imgs/example_problem.png" alt="Texto Alternativo" width="400" height="120">
 </p>
 
 - [Jupyter Notebook](notebooks/MatrizSumasConstantes.ipynb)
@@ -187,7 +187,7 @@ Se han proporcionado algunos números en los cuadrados. **¿Puedes determinar qu
 Los vértices de un cubo se numeran del 1 al 8 de manera que el resultado de sumar los cuatro números de cada cara es el mismo para todas las caras. Se han colocado ya los números 1, 4 y 6 como se muestra en la figura. **¿Qué número va en el vértice marcado con x?**
 
 <p align="center">
-<img src="docs/imgs/cube_problem.png">
+<img src="docs/imgs/cube_problem.png", width="300" height="220">
 </p>
 
 - [Jupyter Notebook](notebooks/ProblemaCubo.ipynb)
