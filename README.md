@@ -152,20 +152,20 @@ Esto resulta en $9 = 9$, confirmando que esta asignación cumple con las restric
 
 
 ## Conclusiones
-El algoritmo AC-3 se presentó como una técnica fundamental para mejorar la eficiencia en la resolución de PSR. Se describió detalladamente el funcionamiento del algoritmo, desde la modelación de restricciones y la representación gráfica bipartita hasta el pseudocódigo y los pasos concretos de la aplicación del algoritmo.
+El algoritmo AC-3 se presentó como una **técnica fundamental para mejorar la eficiencia en la resolución de PSRs**. Se describió detalladamente el funcionamiento del algoritmo, desde la modelación de restricciones y la representación gráfica bipartita hasta el pseudocódigo y los pasos concretos de la aplicación del algoritmo.
 
-La reducción del dominio de las variables tras la aplicación de AC-3 resultó ser una ventaja crucial. Pasamos de un espacio de búsqueda inicial de $5^3$ combinaciones a tan solo $2^3$ combinaciones. Esta disminución drástica en las posibles combinaciones simplificó significativamente la búsqueda de soluciones al problema. La arco-consistencia demostró su eficacia al eliminar valores inconsistentes, permitiéndonos enfocarnos en un conjunto más manejable de soluciones potenciales.
+La reducción del dominio de las variables tras la aplicación de AC-3 resultó ser una ventaja crucial. Pasamos de un espacio de búsqueda inicial de $5^3$ combinaciones a tan solo $2^3$ combinaciones. Esta disminución drástica en las posibles combinaciones simplificó significativamente la búsqueda de soluciones al problema. **La arco-consistencia demostró su eficacia al eliminar valores inconsistentes, permitiéndonos enfocarnos en un conjunto más manejable de soluciones potenciales**.
 
-Es importante destacar que, aunque el ejemplo presentado puede parecer relativamente sencillo, la aplicabilidad de AC-3 se extiende a problemas mucho más complejos. Este algoritmo ha demostrado ser eficaz en la resolución de rompecabezas como el Sudoku, donde las restricciones son más numerosas y las soluciones más intricadas. Al enfrentarse a problemas de mayor envergadura, AC-3 se convierte en una herramienta valiosa para reducir el espacio de búsqueda y acelerar el proceso de encontrar soluciones viables.
+Es importante destacar que, aunque el ejemplo presentado puede parecer relativamente sencillo, **la aplicabilidad de AC-3 se extiende a problemas mucho más complejos**. Este algoritmo ha demostrado ser eficaz en la resolución de rompecabezas como el Sudoku, donde las restricciones son más numerosas y las soluciones más intricadas. Al enfrentarse a problemas de mayor envergadura, AC-3 se convierte en una herramienta valiosa para reducir el espacio de búsqueda y acelerar el proceso de encontrar soluciones viables.
 
-Además, es fundamental destacar que algoritmo no se limita a problemas de rompecabezas; su aplicabilidad se extiende a diversos escenarios del mundo real. Por ejemplo, en la asignación de recursos en proyectos de construcción, donde se deben cumplir restricciones de tiempo, presupuesto y disponibilidad de materiales. Además, en la programación de horarios escolares, donde las limitaciones de aulas, profesores y preferencias de asignaturas deben ser consideradas.
+Además, es fundamental destacar que algoritmo no se limita a problemas de rompecabezas; **su utilidad se extiende a diversos escenarios del mundo real**. Por ejemplo, en la asignación de recursos en proyectos de construcción, donde se deben cumplir restricciones de tiempo, presupuesto y disponibilidad de materiales. Además, en la programación de horarios escolares, donde las limitaciones de aulas, profesores y preferencias de asignaturas deben ser consideradas.
 
 ## Recuros Adicionales
 Para aquellos interesados en explorar la implementación práctica del algoritmo de arco-consistencia AC-3, hemos proporcionado el código correspondiente al ejemplo presentado anteriormente. Además del código para el problema de las sumas constantes en la matriz, también hemos incluido implementaciones para otros dos problemas adicionales que ilustran la versatilidad de AC-3. Estos ejemplos adicionales no solo amplían la comprensión del algoritmo, sino que también ofrecen la oportunidad de ver cómo se aplica a situaciones más complejas y diversas.
 
 
 
-### Matriz de sumas constantes 
+### Matriz de sumas constantes ([Notebook](notebooks/MatrizSumasConstantes.ipynb) | [Script](scripts/constant_sum_matrix.py))
 
 En la siguiente figura, se deben colocar seis números entre el 1 y el 5 en los cuadrados, de manera que se cumplan las siguientes condiciones:
 
@@ -179,10 +179,8 @@ Se han proporcionado algunos números en los cuadrados. **¿Puedes determinar qu
  <img src="docs/imgs/example_problem.png" alt="Texto Alternativo" width="400" height="120">
 </p>
 
-- [Jupyter Notebook](notebooks/MatrizSumasConstantes.ipynb)
-- [Código en script](scripts/constant_sum_matrix.py)
 
-### Problema del Cubo
+### Problema del Cubo ([Notebook](notebooks/ProblemaCubo.ipynb) | [Script](scripts/cube_problem.py))
 
 Los vértices de un cubo se numeran del 1 al 8 de manera que el resultado de sumar los cuatro números de cada cara es el mismo para todas las caras. Se han colocado ya los números 1, 4 y 6 como se muestra en la figura. **¿Qué número va en el vértice marcado con x?**
 
@@ -190,10 +188,8 @@ Los vértices de un cubo se numeran del 1 al 8 de manera que el resultado de sum
 <img src="docs/imgs/cube_problem.png", width="300" height="220">
 </p>
 
-- [Jupyter Notebook](notebooks/ProblemaCubo.ipynb)
-- [Código en script](scripts/cube_problem.py)
 
-### Criptoaritmética
+### CriptoAritmética ([Notebook](notebooks/CriptoAritmetica.ipynb) | [Script](scripts/cryptarithmetic.py))
 
 Cada letra representa un dígito del sistema de numeración decimal.
 
@@ -207,8 +203,6 @@ Encuentra los valores, tales que:
 <img src="docs/imgs/cryptharithmetic.png", width="190" height="150">
 </p>
 
-- [Jupyter Notebook](notebooks/CriptoAritmetica.ipynb)
-- [Código en script](scripts/cryptarithmetic.py)
 
 
 
