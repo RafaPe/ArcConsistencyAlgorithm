@@ -1,4 +1,4 @@
-from arc_consistency import Variable, Constraint, AC3
+from ArcConsistency import Variable, Constraint, AC3
 from itertools import product
 
 def variables_definition(values):
