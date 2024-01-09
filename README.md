@@ -160,7 +160,7 @@ Es importante destacar que, aunque el ejemplo presentado puede parecer relativam
 
 Además, es fundamental destacar que algoritmo no se limita a problemas de rompecabezas; **su utilidad se extiende a diversos escenarios del mundo real**. Por ejemplo, en la asignación de recursos en proyectos de construcción, donde se deben cumplir restricciones de tiempo, presupuesto y disponibilidad de materiales. Además, en la programación de horarios escolares, donde las limitaciones de aulas, profesores y preferencias de asignaturas deben ser consideradas.
 
-## Recuros Adicionales
+## Recursos Adicionales
 Para aquellos interesados en explorar la implementación práctica del algoritmo de arco-consistencia AC-3, hemos proporcionado el código correspondiente al ejemplo presentado anteriormente. Además del código para el problema de las sumas constantes en la matriz, también hemos incluido implementaciones para otros dos problemas adicionales que ilustran la versatilidad de AC-3. Estos ejemplos adicionales no solo amplían la comprensión del algoritmo, sino que también ofrecen la oportunidad de ver cómo se aplica a situaciones más complejas y diversas.
 
 
